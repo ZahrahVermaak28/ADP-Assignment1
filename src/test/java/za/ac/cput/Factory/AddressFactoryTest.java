@@ -29,7 +29,7 @@ class AddressFactoryTest {
                 "8000"
         );
 
-        assertNull(address, "empty street name");
+        assertNull(address, "null Street name");
     }
 
     @Test
@@ -40,7 +40,7 @@ class AddressFactoryTest {
                 "8000"
         );
 
-        assertNull(address, "empty city");
+        assertNull(address, "null City");
     }
 
     @Test
@@ -51,6 +51,6 @@ class AddressFactoryTest {
                 null
         );
 
-        assertNull(address, " empty postal code");
+        assertNull(address, "null Postal code");
     }
 }

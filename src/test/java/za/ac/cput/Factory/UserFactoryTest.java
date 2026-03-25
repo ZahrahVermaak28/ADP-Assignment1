@@ -33,7 +33,7 @@ class UserFactoryTest {
                 "12345"
         );
 
-        assertNull(user, "name should not be empty");
+        assertNull(user, "null name");
     }
 
     @Test

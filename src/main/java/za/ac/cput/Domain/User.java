@@ -10,6 +10,7 @@ public class User {
     private String name;
     private String surname;
     private String email;
+    private String password;
 
     public User() {
     }
@@ -19,6 +20,7 @@ public class User {
         this.name = builder.name;
         this.surname = builder.surname;
         this.email = builder.email;
+        this.password = builder.password;
     }
 
     public String getUserID() {
@@ -33,6 +35,9 @@ public class User {
     public String getEmail(){
         return email;
     }
+    public String getPassword(){
+        return password;
+    }
 
     public String getFullName() {
         return "Name: " + name + " " + "Surname: " + surname;
@@ -43,6 +48,7 @@ public class User {
         private String name;
         private String surname;
         private String email;
+        private String password;
 
         public Builder setUserId(String userId) {
             this.userID = userId;
@@ -63,6 +69,10 @@ public class User {
             this.email = email;
             return this;
         }
+        public Builder setPassword(String password){
+            this.password = password;
+            return this;
+        }
 
         public User build() {
             return new User(this);
@@ -74,10 +84,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId='" + userID + '\'' +
+                "userID='" + userID + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

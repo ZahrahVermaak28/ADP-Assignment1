@@ -1,6 +1,7 @@
 package za.ac.cput.Domain;
 
-public class Product {private String productId;
+public class Product {
+    private String productId;
     private String name;
     private String description;
     private double price;

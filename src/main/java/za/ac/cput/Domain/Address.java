@@ -4,14 +4,20 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Address {
-    private final String street;
-    private final String city;
-    private final String postalCode;
+    private  String addressId;
+    private  String street;
+    private  String city;
+    private  String postalCode;
 
     private Address(Builder builder) {
+        this.addressId = builder.addressId;
         this.street = builder.street;
         this.city = builder.city;
         this.postalCode = builder.postalCode;
+    }
+
+    public String getAddressId() {
+        return addressId;
     }
 
     public String getStreet() { return street; }
@@ -19,9 +25,14 @@ public class Address {
     public String getPostalCode() { return postalCode; }
 
     public static class Builder {
+        private  String addressId;
         private String street;
         private String city;
         private String postalCode;
+
+        public void setAddressId(String addressId) {
+            this.addressId = addressId;
+        }
 
         public Builder setStreet(String street) {
             this.street = street;

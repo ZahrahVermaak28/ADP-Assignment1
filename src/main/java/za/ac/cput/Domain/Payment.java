@@ -3,22 +3,25 @@ package za.ac.cput.Domain;
 public class Payment {
     private final String paymentId;
     private final double amount;
-    private final String method;
+    private final String paymentMethod;
 
     private Payment(Builder builder) {
         this.paymentId = builder.paymentId;
         this.amount = builder.amount;
-        this.method = builder.method;
+        this.paymentMethod = builder.paymentMethod;
     }
 
     public String getPaymentId() { return paymentId; }
     public double getAmount() { return amount; }
-    public String getMethod() { return method; }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
 
     public static class Builder {
         private String paymentId;
         private double amount;
-        private String method;
+        private String paymentMethod;
 
         public Builder setPaymentId(String paymentId) {
             this.paymentId = paymentId;
@@ -30,9 +33,8 @@ public class Payment {
             return this;
         }
 
-        public Builder setMethod(String method) {
-            this.method = method;
-            return this;
+        public void setPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
         }
 
         public Payment build() {

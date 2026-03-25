@@ -8,6 +8,7 @@ public class Main {
            //     .setName("Jane")
              //   .setSurname("Doe")
                // .setEmail("JaneDoes@gmail.com")
+        // .setPassword("TestingPassword")
                 //.build();
         //System.out.println(user1.getFullName());
 

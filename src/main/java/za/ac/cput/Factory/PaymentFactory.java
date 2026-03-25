@@ -7,7 +7,7 @@ public class PaymentFactory {
         return new Payment.Builder()
                 .setPaymentId(id)
                 .setAmount(amount)
-                .setMethod(method)
+                .setPaymentMethod(method)
                 .build();
     }
 }

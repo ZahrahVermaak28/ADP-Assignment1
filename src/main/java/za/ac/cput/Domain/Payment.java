@@ -33,8 +33,9 @@ public class Payment {
             return this;
         }
 
-        public void setPaymentMethod(String paymentMethod) {
+        public Builder setPaymentMethod(String paymentMethod) {
             this.paymentMethod = paymentMethod;
+            return this;
         }
 
         public Payment build() {

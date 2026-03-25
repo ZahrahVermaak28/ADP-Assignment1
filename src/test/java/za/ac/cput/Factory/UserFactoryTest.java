@@ -24,7 +24,7 @@ class UserFactoryTest {
     }
 
     @Test
-    void createUser_fail_nullName() {
+    void createUser_nullName() {
         // Try to create user with null name
         User user = UserFactory.createUser(
                 null,
@@ -37,7 +37,7 @@ class UserFactoryTest {
     }
 
     @Test
-    void createUser_fail_nullPassword() {
+    void createUser_nullPassword() {
         // Try to create user with null password
         User user = UserFactory.createUser(
                 "Zahrah",

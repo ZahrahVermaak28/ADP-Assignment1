@@ -1,10 +1,11 @@
+package za.ac.cput.Factory;
 /**
  *
  * @author keano
  */
 
-import Domain.Bid;
-import factory.BidFactory;
+import za.ac.cput.Domain.Bid;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;

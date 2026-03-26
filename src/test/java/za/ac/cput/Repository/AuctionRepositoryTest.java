@@ -2,6 +2,7 @@ package za.ac.cput.Repository;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.Domain.Auction;
+import za.ac.cput.repositoryImpl.AuctionRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

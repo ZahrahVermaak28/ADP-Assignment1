@@ -1,16 +1,16 @@
-package Repository.Impl;
+package za.ac.cput.repositoryImpl;
 
 /**
  *
  * @author keano
  */
 
-import Domain.Bid;
-import Repository.BidRepository;
+import za.ac.cput.Domain.Bid;
+import za.ac.cput.Repository.IBidRepository;
 
 import java.util.*;
 
-public class BidRepositoryImpl implements BidRepository {
+public class BidRepository implements IBidRepository {
 
     private Map<String, Bid> bidDB = new HashMap<>();
 

@@ -1,11 +1,12 @@
-package za.ac.cput.Repository;
+package za.ac.cput.repositoryImpl;
 
 import za.ac.cput.Domain.Auction;
+import za.ac.cput.Repository.IAuctionRepository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AuctionRepository implements IAuctionRepository{
+public class AuctionRepository implements IAuctionRepository {
 
     private Map<Long, Auction> data = new HashMap<>();
 

@@ -1,14 +1,13 @@
-
+package za.ac.cput.Repository;
 /**
  *
  * @author keano
  */
 
 
-import Domain.Bid;
-import Repository.BidRepository;
-import Repository.Impl.BidRepositoryImpl;
-import factory.BidFactory;
+import za.ac.cput.Domain.Bid;
+import za.ac.cput.repositoryImpl.BidRepository;
+import za.ac.cput.Factory.BidFactory;
 
 
 import org.junit.jupiter.api.Test;
@@ -19,7 +18,7 @@ public class BidRepositoryTest {
     @Test
     void testRepositoryCRUD() {
 
-        BidRepository repo = new BidRepositoryImpl();
+        IBidRepository repo = new BidRepository();
 
         Bid bid = BidFactory.createBid("A1", "U1", 500);
 

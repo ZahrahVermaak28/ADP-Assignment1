@@ -4,9 +4,9 @@
  *
  * @author keano
  */
-package factory;
+package za.ac.cput.Factory;
 
-import Domain.Bid;
+import za.ac.cput.Domain.Bid;
 import java.util.Date;
 import java.util.UUID;
 

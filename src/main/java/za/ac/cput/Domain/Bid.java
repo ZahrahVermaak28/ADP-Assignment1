@@ -1,12 +1,10 @@
-
-package Domain;
+package za.ac.cput.Domain;
 
 /**
  * @author keano Winnaar 230935869
  */
 
 import java.util.Date;
-
 public class Bid {
 
     private String auctionId;
@@ -16,7 +14,7 @@ public class Bid {
     private Date timestamp;
 
     private Bid(Builder builder) {
-        
+
         this.auctionId = builder.auctionId;
         this.userId = builder.userId;
         this.bidId = builder.bidId;
@@ -27,11 +25,11 @@ public class Bid {
     public String getAuctionId() {
         return auctionId;
     }
-    
+
     public String getUserId() {
         return userId;
     }
-    
+
     public String getBidId() {
         return bidId;
     }
@@ -45,7 +43,7 @@ public class Bid {
     }
 
     public static class Builder {
-       
+
         private String auctionId;
         private String userId;
         private String bidId;
@@ -62,7 +60,7 @@ public class Bid {
             this.userId = userId;
             return this;
         }
-        
+
         public Builder setBidId(String bidId) {
             this.bidId = bidId;
             return this;

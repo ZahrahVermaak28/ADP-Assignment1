@@ -1,7 +1,7 @@
 package za.ac.cput.Repository;
 
 import za.ac.cput.Domain.Product;
-import java.util.Set;
+import java.util.List;
 
 public interface IProductRepository {
 
@@ -13,5 +13,5 @@ public interface IProductRepository {
 
     boolean delete(String productId);
 
-    Set<Product> getAll();
+    List<Product> getAll();
 }

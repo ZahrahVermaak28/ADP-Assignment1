@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.Domain.Product;
 import za.ac.cput.Factory.ProductFactory;
 
-import java.util.Set;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,7 +16,8 @@ class ProductRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        repository = new ProductRepository();
+        repository = ProductRepository.getRepository();
+
         product = ProductFactory.createProduct(
                 "P001",
                 "Microwave",
@@ -24,31 +25,48 @@ class ProductRepositoryTest {
                 1500.00,
                 false
         );
+
+        repository.create(product);
     }
 
     @Test
-    void create() {
-        Product created = repository.create(product);
+    void getRepository() {
+        ProductRepository repo = ProductRepository.getRepository();
+        assertNotNull(repo);
+        System.out.println("Repository instance created");
+    }
+
+    @Test
+    void testCreate() {
+        Product newProduct = ProductFactory.createProduct(
+                "P002",
+                "Air Fryer",
+                "Philips Air Fryer",
+                1800.00,
+                false
+        );
+
+        Product created = repository.create(newProduct);
+
         assertNotNull(created);
         System.out.println(created);
     }
 
     @Test
-    void read() {
-        repository.create(product);
+    void testRead() {
         Product found = repository.read("P001");
+
         assertNotNull(found);
         System.out.println(found);
     }
 
     @Test
-    void update() {
-        repository.create(product);
+    void testUpdate() {
 
         Product updatedProduct = new Product.Builder()
                 .SetProductId("P001")
                 .SetProductName("Updated Microwave")
-                .SetDescription("Updated Description")
+                .SetDescription("Updated Samsung Microwave")
                 .SetPrice(2000.00)
                 .SetIsAuction(false)
                 .build();
@@ -60,17 +78,19 @@ class ProductRepositoryTest {
     }
 
     @Test
-    void delete() {
-        repository.create(product);
+    void testDelete() {
+
         boolean deleted = repository.delete("P001");
+
         assertTrue(deleted);
-        System.out.println("Product deleted");
+        System.out.println("Product deleted successfully");
     }
 
     @Test
-    void getAll() {
-        repository.create(product);
-        Set<Product> products = repository.getAll();
+    void testGetAll() {
+
+        List<Product> products = repository.getAll();
+
         assertFalse(products.isEmpty());
         System.out.println(products);
     }

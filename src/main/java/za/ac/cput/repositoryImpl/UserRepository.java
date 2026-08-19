@@ -68,6 +68,11 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
+    public boolean exists(String userId) {
+        return false;
+    }
+
+    @Override
     public List<User> getAll() {
         return allUsers;
     }

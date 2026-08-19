@@ -1,15 +1,18 @@
 package za.ac.cput.Domain;
 /**
- * @author Elona Sinjica
+ * @author Elona Sonjica
  */
 
 import java.util.List;
 
 public class Order {
-    private final String orderId;
-    private final String userId;
-    private final List<String> productList;
-    private final double totalAmount;
+    private String orderId;
+    private String userId;
+    private List<String> productList;
+    private double totalAmount;
+
+    public Order() {
+    }
 
     private Order(Builder builder) {
         this.orderId = builder.orderId;

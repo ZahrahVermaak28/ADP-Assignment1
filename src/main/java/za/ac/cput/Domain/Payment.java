@@ -4,10 +4,12 @@ package za.ac.cput.Domain;
  */
 
 public class Payment {
-    private final String paymentId;
-    private final double amount;
-    private final String paymentMethod;
+    private String paymentId;
+    private double amount;
+    private String paymentMethod;
 
+    public Payment() {
+    }
 
     private Payment(Builder builder) {
         this.paymentId = builder.paymentId;
@@ -16,11 +18,13 @@ public class Payment {
     }
 
     public String getPaymentId() { return paymentId; }
-    public double getAmount() { return amount; }
+    public void setPaymentId(String paymentId) { this.paymentId = paymentId; }
 
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
+    public double getAmount() { return amount; }
+    public void setAmount(double amount) { this.amount = amount; }
+
+    public String getPaymentMethod() { return paymentMethod; }
+    public void setPaymentMethod(String paymentMethod) { this.paymentMethod = paymentMethod; }
 
     @Override
     public String toString() {

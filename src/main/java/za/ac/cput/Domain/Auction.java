@@ -7,18 +7,25 @@ package za.ac.cput.Domain;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
+
 public class Auction {
 
-        private final Long auctionID;
-        private final Long productID;
-        private final String userID;
-        private final BigDecimal startingPrice;
+
+
+        private  Long auctionID;
+        private  Long productID;
+        private  String userID;
+        private  BigDecimal startingPrice;
         private BigDecimal currentHighestBid;
         private Long currentHighestBidderId;
-        private final LocalDateTime endTime;
+        private  LocalDateTime endTime;
         private boolean isActive;
 
-        public Auction(Builder builder){
+    public Auction() {
+    }
+
+    public Auction(Builder builder){
             this.auctionID = builder.auctionID;
             this.productID = builder.productID;
             this.userID = builder.userID;
@@ -103,7 +110,12 @@ public class Auction {
         public BigDecimal getStartingPrice() {return startingPrice;}
         public BigDecimal getCurrentHighestBid() {return currentHighestBid;}
         public Long getCurrentHighestBidderID() {return currentHighestBidderId;}
-        public boolean isActive() {return isActive;}
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public boolean isActive() {return isActive;}
 
         public void placeBid(Long bidder, BigDecimal bidPrice){
             if (!isActive) throw new IllegalStateException("Auction is not active");

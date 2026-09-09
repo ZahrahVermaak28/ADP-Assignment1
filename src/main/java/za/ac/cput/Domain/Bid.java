@@ -13,6 +13,9 @@ public class Bid {
     private double bidAmount;
     private Date timestamp;
 
+    public Bid() {
+    }
+
     private Bid(Builder builder) {
 
         this.auctionId = builder.auctionId;
@@ -40,6 +43,17 @@ public class Bid {
 
     public Date getTimestamp() {
         return timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "Bid{" +
+                "auctionId='" + auctionId + '\'' +
+                ", userId='" + userId + '\'' +
+                ", bidId='" + bidId + '\'' +
+                ", bidAmount=" + bidAmount +
+                ", timestamp=" + timestamp +
+                '}';
     }
 
     public static class Builder {

@@ -1,4 +1,3 @@
-
 package za.ac.cput.Repository;
 
 /**
@@ -8,6 +7,7 @@ package za.ac.cput.Repository;
 
 
 import za.ac.cput.Domain.Bid;
+import za.ac.cput.Repository.IRepository;
 
 public interface IBidRepository extends IRepository<Bid, String> {
 }

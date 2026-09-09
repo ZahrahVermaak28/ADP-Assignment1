@@ -5,11 +5,13 @@ package za.ac.cput.repositoryImpl;
  * @author keano
  */
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.Domain.Bid;
 import za.ac.cput.Repository.IBidRepository;
 
 import java.util.*;
 
+@Repository
 public class BidRepository implements IBidRepository {
 
     private Map<String, Bid> bidDB = new HashMap<>();
